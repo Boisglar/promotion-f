@@ -1,4 +1,3 @@
-
 import './App.css';
 import AddFighter from './components/fighters/AddFighter';
 
