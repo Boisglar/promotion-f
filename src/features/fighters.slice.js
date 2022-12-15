@@ -26,7 +26,7 @@ export const postFighter = createAsyncThunk (
     'fighter/post',
     async (data, thunkAPI) => {
         try {
-            const {firstName, lastName, alias, age, height, win, draw, loss, image} = data
+            const {firstName, lastName, alias, age, height, win, draw, loss, image, weight} = data
             const res = await fetch('http://localhost:4000/fighters', {
                 method: 'POST',
                 headers: {
@@ -40,6 +40,7 @@ export const postFighter = createAsyncThunk (
                     alias,
                     age,
                     height,
+                    weight,
                     statistic: {
                         win,
                         draw,
@@ -63,8 +64,8 @@ const fightersSlice = createSlice({
     name: 'fighters',
     initialState,
     reducers: {},
-    extraReducers: (bulider) => {
-        bulider
+    extraReducers: (builder) => {
+        builder
             .addCase(getFighters.pending, (state, action) => {
                 state.loading = true
                 state.error = null
