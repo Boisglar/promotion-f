@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import fightersSlice from "../features/fighters.slice";
 import users from "../features/newsSlice"
 
-export const store = configureStore({
+const store = configureStore({
     reducer: {
-        news: users,
+        fighters: fightersSlice,
+        news: users
     }
 })
+
+export default store
