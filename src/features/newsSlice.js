@@ -5,8 +5,6 @@ const initialState = {
 }
 
 
-
-
 const userSlice = createSlice({
     name: "news",
     initialState,
