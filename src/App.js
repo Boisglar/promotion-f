@@ -6,9 +6,11 @@ function App() {
     return (
         <div className ="App">
             <NewsGet/>
+              <AddFighter/>
             {/* <NewsAdd/> */}
         </div>
     )
+
 }
 
 export default App;
