@@ -1,10 +1,14 @@
 import './App.css';
-import AddFighter from './components/fighters/AddFighter';
+import NewsRender from './components/news/NewsRender';
+// import AddFighter from './components/fighters/AddFighter';
+// import PostNews from './components/news/PostNews';
 
 function App() {
   return (
     <div className="App">
-      <AddFighter/>
+      <NewsRender/>
+      {/* <AddFighter/>
+      <PostNews/> */}
     </div>
   );
 }
