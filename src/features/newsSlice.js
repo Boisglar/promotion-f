@@ -7,9 +7,9 @@ const initialState = {
 }
 
 
-export const getNews = createAsyncThunk("news/get", async (_, thunkAPI) => {
+export const getNews = createAsyncThunk("news/get", async (data, thunkAPI) => {
     try {
-        const res =await fetch("http://localhost:4000/news")
+        const res = await fetch("http://localhost:4000/news")
         const news = await res.json()
         if(news.error) {
             return thunkAPI.rejectWithValue(news.error)
@@ -44,9 +44,26 @@ try {
     return thunkAPI.rejectWithValue(error.message)
 }
 })
+export const deleteNews = createAsyncThunk("news/delete", async (id, thunkAPI) => {
+    try {
+        const res = await fetch(`http://localhost:4000/news/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const news = res.json()
 
+        if (news.error) {
+            return thunkAPI.rejectWithValue(news.error)
+        }
+        return thunkAPI.fulfillWithValue(news)
 
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error.message)
+    }
 
+})
 
 const userSlice = createSlice({
     name: "news",
@@ -64,7 +81,19 @@ const userSlice = createSlice({
         })
         .addCase(getNews.fulfilled, (state, action) => {
             state.loading = false
-            state.news.push(action.payload)
+            state.news = action.payload
+        })
+        .addCase(deleteNews.pending, (state, action) => {
+            state.loading = true
+            state.error = null
+        })
+        .addCase(deleteNews.rejected, (state, action) => {
+            state.error = action.payload
+            state.loading = false
+        })
+        .addCase(deleteNews.fulfilled, (state, action) => {
+            state.loading = false
+            state.news = state.news.filter(item => item._id !== action.payload._id)
         })
         
 

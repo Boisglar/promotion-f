@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addNews } from '../../features/newsSlice';
 
 
 export default function NewsAdd() {
@@ -15,7 +14,7 @@ const [text, setText] = useState('')
 
 
 const handelePostNews = () => {
-  dispatch(addNews({header, image, text}))
+  dispatch(NewsAdd({header, image, text}))
 }
 
 
