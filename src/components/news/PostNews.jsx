@@ -59,7 +59,8 @@ const PostNews = () => {
             <button onClick={handleImg}>Загрузить и получить ссылку</button>
             <button type='button' onClick={handlePost}>Сохранить</button>
             {load && images.data.map((item) => <LoadedImages path={item.path}/>)}
-            <div dangerouslySetInnerHTML={{__html:'<p>Hello World, How your wife and childs?</p><p><img src="http://localhost:4000/images/post/16122022-225857_404_13pro_max_8.jpg" alt="" width="308" height="395"></p><h1>This is first blog</h1>'}}></div>
+            <div dangerouslySetInnerHTML={{__html: `<p>Hello World, How your wife and childs?</p><p><img src="http://localhost:4000/images/post/16122022-225857_404_13pro_max_8.jpg" alt="" width="308" height="395"></p>
+<h1>This is first blog</h1>`}}></div>
         </div>
 
     );
