@@ -11,13 +11,14 @@ export const registration = createAsyncThunk(
     'user/registration',
     async (data, thunkAPI) => {
         try {
-            const { email, password } = data
+            const { email, password, firstName, lastName } = data
+            console.log(email, password, firstName, lastName);
             const res = await fetch('http://localhost:4000/registration', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify({ email, password })
+                body: JSON.stringify({ email, password, firstName, lastName })
             })
             const user = await res.json()
             if (user.message) {
@@ -83,13 +84,13 @@ export const checkAuth = createAsyncThunk(
     'user/check',
     async (data, thunkAPI) => {
         try {
-            const res = fetch('http://localhost:4000/refresh')
+            const res = await fetch('http://localhost:4000/refresh')
             const user = await res.json()
+            console.log(user);
             if (user.message) {
                 console.log(user.message);
                 return thunkAPI.rejectWithValue(user.message)
             }
-            console.log(user.user);
             localStorage.setItem('token', user.accessToken)
             return thunkAPI.fulfillWithValue(user)
         } catch (error) {
@@ -110,12 +111,12 @@ const authSlice = createSlice({
             })
             .addCase(registration.rejected, (state, action) => {
                 state.loading = false
-                state.error = action.payload.message
+                state.error = action.payload
             })
             .addCase(registration.fulfilled, (state, action) => {
                 state.loading = false
                 state.isAuth = true
-                state.user = action.payload.user
+                state.user = action.payload
             })
             .addCase(login.pending, (state, action) => {
                 state.loading = true
@@ -123,12 +124,12 @@ const authSlice = createSlice({
             })
             .addCase(login.rejected, (state, action) => {
                 state.loading = false
-                state.error = action.payload.message
+                state.error = action.payload
             })
             .addCase(login.fulfilled, (state, action) => {
                 state.loading = false
                 state.isAuth = true
-                state.user = action.payload.user
+                state.user = action.payload
             })
             .addCase(logout.pending, (state, action) => {
                 state.loading = true
@@ -136,7 +137,7 @@ const authSlice = createSlice({
             })
             .addCase(logout.rejected, (state, action) => {
                 state.loading = false
-                state.error = action.payload.message
+                state.error = action.payload
             })
             .addCase(logout.fulfilled, (state, action) => {
                 state.loading = false
@@ -149,12 +150,12 @@ const authSlice = createSlice({
             })
             .addCase(checkAuth.rejected, (state, action) => {
                 state.loading = false
-                state.error = action.payload.message
+                state.error = action.payload
             })
             .addCase(checkAuth.fulfilled, (state, action) => {
                 state.loading = false
                 state.isAuth = true
-                state.user = action.payload.user
+                state.user = action.payload
             })
     }
 })
