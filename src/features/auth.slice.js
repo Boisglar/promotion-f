@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+import $api from "./http";
 
 const initialState = {
     user: [],
@@ -12,23 +13,11 @@ export const registration = createAsyncThunk(
     async (data, thunkAPI) => {
         try {
             const { email, password, firstName, lastName } = data
-            console.log(email, password, firstName, lastName);
-            const res = await fetch('http://localhost:4000/registration', {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify({ email, password, firstName, lastName })
-            })
-            const user = await res.json()
-            if (user.message) {
-                console.log(user.message);
-                return thunkAPI.rejectWithValue(user.message)
-            }
-            localStorage.setItem('token', user.accessToken)
-            return thunkAPI.fulfillWithValue(user)
+            const res = await $api.post('/registration', { email, password, firstName, lastName })
+            localStorage.setItem('token', res.data.accessToken)
+            return thunkAPI.fulfillWithValue(res.data.user)
         } catch (error) {
-            return thunkAPI.rejectWithValue(error)
+            return thunkAPI.rejectWithValue(error.response.data.message)
         }
     }
 )
@@ -38,23 +27,11 @@ export const login = createAsyncThunk(
     async (data, thunkAPI) => {
         try {
             const { email, password } = data
-            const res = await fetch('http://localhost:4000/login', {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify({ email, password })
-            })
-            const user = await res.json()
-            if (user.message) {
-                console.log(user.message);
-                return thunkAPI.rejectWithValue(user.message)
-            }
-            console.log(user.user);
-            localStorage.setItem('token', user.accessToken)
-            return thunkAPI.fulfillWithValue(user)
+            const res = await $api.post('/login', {email, password})
+            localStorage.setItem('token', res.data.accessToken)
+            return thunkAPI.fulfillWithValue(res.data.user)
         } catch (error) {
-            return thunkAPI.rejectWithValue(error)
+            return thunkAPI.rejectWithValue(error.response.data.message)
         }
     }
 )
@@ -63,19 +40,10 @@ export const logout = createAsyncThunk(
     'user/logout',
     async (data, thunkAPI) => {
         try {
-            const res = await fetch('http://localhost:4000/logout', {
-                method: 'POST'
-            })
-            const token = await res.json()
-            if (token.message) {
-                console.log(token.message);
-                return thunkAPI.rejectWithValue(token.message)
-            }
-            console.log(token);
+            await $api.post('/logout')
             localStorage.removeItem('token')
-            return thunkAPI.fulfillWithValue(token)
         } catch (error) {
-            return thunkAPI.rejectWithValue(error)
+            return thunkAPI.rejectWithValue(error.response.data.message)
         }
     }
 )
@@ -84,17 +52,11 @@ export const checkAuth = createAsyncThunk(
     'user/check',
     async (data, thunkAPI) => {
         try {
-            const res = await fetch('http://localhost:4000/refresh')
-            const user = await res.json()
-            console.log(user);
-            if (user.message) {
-                console.log(user.message);
-                return thunkAPI.rejectWithValue(user.message)
-            }
-            localStorage.setItem('token', user.accessToken)
-            return thunkAPI.fulfillWithValue(user)
+            const res = await $api.get('/refresh')
+            localStorage.setItem('token', res.data.accessToken)
+            return thunkAPI.fulfillWithValue(res.data.user)
         } catch (error) {
-            return thunkAPI.rejectWithValue(error)
+            return thunkAPI.rejectWithValue(error.response.data.message)
         }
     }
 )
