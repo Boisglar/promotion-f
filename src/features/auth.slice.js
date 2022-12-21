@@ -3,6 +3,7 @@ import $api from "./http";
 
 const initialState = {
     user: [],
+    allUsers: [],
     isAuth: false,
     loading: false,
     error: null
@@ -61,10 +62,15 @@ export const checkAuth = createAsyncThunk(
     }
 )
 
+
 const authSlice = createSlice({
     name: 'users',
     initialState,
-    reducers: {},
+    reducers: {
+        usersState(state, action) {
+            state.allUsers = action.payload
+        },
+    },
     extraReducers: (builder) => {
         builder
             .addCase(registration.pending, (state, action) => {
@@ -121,5 +127,7 @@ const authSlice = createSlice({
             })
     }
 })
+
+export const { usersState } = authSlice.actions;
 
 export default authSlice.reducer
