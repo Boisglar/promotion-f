@@ -5,10 +5,7 @@ import Chemp from './components/chemp/Chemp';
 import Merch from './components/merch/Merch';
 import Life from './components/life/Life';
 import Gallery from './components/gallery/gallery';
-// import {
-//   BrowserRouter as Router,
-//   Route
-// } from "react-router-dom";
+
 
 function App() {
   return (
@@ -20,7 +17,7 @@ function App() {
       <Chemp/>
       <Merch/>
       <Life/>
-      {/* <Gallery/> */}
+      <Gallery/>
     </div>
   );
 }
