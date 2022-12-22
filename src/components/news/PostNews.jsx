@@ -1,40 +1,40 @@
-// import { Editor } from '@tinymce/tinymce-react';
-// import React, { useRef, useState } from 'react';
-// import axios from 'axios';
-// import LoadedImages from './LoadedImages';
+ import { Editor } from '@tinymce/tinymce-react';
+ import React, { useRef, useState } from 'react';
+ import axios from 'axios';
+ import LoadedImages from './LoadedImages';
 
-// const PostNews = () => {
-//     const [img, setImg] = useState([])
-//     const editorRef = useRef()
-//     const [load, setLoad] = useState(false)
-//     const [images, setImages] = useState('')
-//     let image = ''
+ const PostNews = () => {
+     const [img, setImg] = useState([])
+     const editorRef = useRef()
+     const [load, setLoad] = useState(false)
+     const [images, setImages] = useState('')
+     let image = ''
 
    
 
-//     const handleImg = async () => {
-//         try {
-//             const data = new FormData()
-//             for (let i = 0; i < img.length; i++) {
-//                 data.append('post', img[i])
-//             }
-//             await axios.post('http://localhost:4000/postimage', data, {
-//                 headers: {
-//                     'content-type': 'multipart/form-data'
-//                 }
-//             }).then(res => image = res)
-//             setLoad(true)
-//             setImages((x) => image)
-//         } catch (error) {
-//             console.log(error.message);
-//         }
-//     }
+     const handleImg = async () => {
+         try {
+             const data = new FormData()
+             for (let i = 0; i < img.length; i++) {
+                 data.append('post', img[i])
+             }
+             await axios.post('http://localhost:4000/postimage', data, {
+                 headers: {
+                     'content-type': 'multipart/form-data'
+                 }
+             }).then(res => image = res)
+             setLoad(true)
+             setImages((x) => image)
+         } catch (error) {
+             console.log(error.message);
+         }
+    }
 
-//     const handlePost = () => {
-//         console.log(editorRef.current.getContent());
-//     }
+   const handlePost = () => {
+         console.log(editorRef.current.getContent());
+   }
 
-//     console.log(images.data);
+    console.log(images.data);
 
 
     return (
@@ -63,8 +63,7 @@
             <div dangerouslySetInnerHTML={{__html: `<p>Hello World, How your wife and childs?</p><p><img src="http://localhost:4000/images/post/16122022-225857_404_13pro_max_8.jpg" alt="" width="308" height="395"></p>
 <h1>This is first blog</h1>`}}></div>
         </div>
+     );
+};
 
-//     );
-// };
-
-// export default PostNews;
+export default PostNews;
