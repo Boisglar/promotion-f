@@ -1,0 +1,15 @@
+.uzory {
+    margin: auto;
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.uzor {
+    width: 10px;
+    height: 10px;
+    background: #DB3138;
+    transform: rotate(-45deg);
+}
