@@ -6,8 +6,8 @@ import { addNews } from '../../features/newsSlice';
 
 export default function NewsAdd() {
   const dispatch = useDispatch()
-  const loading = useSelector((state) => state.loading)
-  const error = useSelector((state) => state.error)
+  // const loading = useSelector((state) => state.loading)
+  // const error = useSelector((state) => state.error)
 
 const [header, setHeader] = useState('');
 const [image, setImage] = useState('')
