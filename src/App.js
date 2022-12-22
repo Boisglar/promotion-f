@@ -6,8 +6,8 @@ import Merch from './components/merch/Merch';
 import Life from './components/life/Life';
 import Gallery from './components/gallery/gallery';
 
-
 function App() {
+ 
   return (
     <div className="App">
       <div className='fon'>
@@ -18,8 +18,10 @@ function App() {
       <Merch/>
       <Life/>
       <Gallery/>
+
     </div>
   );
-}
+    }
+
 
 export default App;
