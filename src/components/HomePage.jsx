@@ -1,4 +1,5 @@
 import React from 'react';
+import Responsive from './HomePage/Carousel/Carousel';
 import Chemp from './HomePage/chemp/Chemp';
 import Gallery from './HomePage/gallery/gallery';
 import Life from './HomePage/main/life/Life';
@@ -11,6 +12,7 @@ const HomePage = () => {
         <div>
             <Main/>
             <Chemp/>
+            <Responsive/>
             <Merch/>
             <Life/>
             <Points/>

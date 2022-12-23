@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import "../Carousel/Carousel.css"
+import "./Carousel.css"
 
 export default class Responsive extends Component {
   render()
