@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCart } from '../../features/cart.slice';
+import { getCart } from '../../../Features/cart.slice';
 import CartItem from './CartItem';
 import styles from './Cart.module.scss'
 

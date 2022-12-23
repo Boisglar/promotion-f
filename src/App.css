@@ -2,10 +2,10 @@
   text-align: center;
 }
 
-.fon {
+body {
   background-image: url(fonof.jpg);
   background-size: 100%;
-    height: 750px;
+  height: 750px;
 }
 
 @keyframes App-logo-spin {

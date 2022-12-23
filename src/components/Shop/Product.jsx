@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RouterProvider, useParams } from "react-router-dom";
-import { getProduct } from "../../features/product.slice";
-import styles from "../Products/product.module.css";
+import { useParams } from "react-router-dom";
+import { getProduct } from "../../Features/product.slice";
+import styles from "../Products/Product.module.css";
 import img2 from "./photo/basket.png";
-import Cart from "../Cart/Cart";
+import Cart from "./Cart/Cart";
 
 const Product = () => {
   const dispatch = useDispatch();

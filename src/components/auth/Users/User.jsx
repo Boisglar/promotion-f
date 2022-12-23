@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { usersState } from '../../features/auth.slice';
-import $api from '../../features/http';
+import { usersState } from '../../../Features/auth.slice';
+import $api from '../../../Features/http';
 
 const User = ({firstName, lastName, roles, id}) => {
     const dispatch = useDispatch()

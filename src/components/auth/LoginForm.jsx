@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../features/auth.slice';
+import { login } from '../../Features/auth.slice';
 
 const LoginForm = () => {
     const dispatch = useDispatch()

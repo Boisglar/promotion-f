@@ -5,11 +5,11 @@ import {
   getProducts,
   setSearchText,
   searching,
-} from "../../features/product.slice";
-import styles from "../Products/Shop.module.css";
-import { cartState } from "../../features/cart.slice";
-import { addToCart } from "../../features/cart.slice";
-import Cart from "../Cart/Cart";
+} from "../../Features/product.slice";
+import styles from "./Shop.module.css";
+import { cartState } from "../../Features/cart.slice";
+import { addToCart } from "../../Features/cart.slice";
+import Cart from "./Cart/Cart";
 
 const Shop = (product) => {
   const active = useSelector((state) => state.cart.active);

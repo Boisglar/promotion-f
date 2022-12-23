@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteFromCart, changeCart } from "../../features/cart.slice";
+import { changeCart, deleteFromCart } from "../../../Features/cart.slice";
+
 import styles from "./Cart.module.scss";
 
 const CartItem = ({ product }) => {

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getNews } from "../../../features/newsSlice";
-import "../newsGet/NewsGet.css";
+import "./NewsGet.css";
 
 export default function NewsGet() {
   // const news = useSelector((state) => state.news.news)

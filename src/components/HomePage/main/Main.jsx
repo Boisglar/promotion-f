@@ -9,7 +9,7 @@ export default function Main() {
         <div>
             <div className={styles.title}>LFL</div>
             <Points />
-            <img className={styles.images} src={images}/> 
+            <img className={styles.images} src={images} alt='fighter'/> 
             <div className={styles.description}>ВСЕ БОИ ЗА ПОЯС</div>
         </div>
         <div className={styles.blocks}>

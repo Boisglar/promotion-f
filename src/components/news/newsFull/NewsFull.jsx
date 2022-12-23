@@ -1,7 +1,7 @@
 import React from 'react'
 import "./NewsFull.css"
 
-export default function newsFull() {
+function NewsFull() {
   return (
     <div className="newsFull">
         <div>
@@ -60,3 +60,5 @@ apps.apple.com/tt/app/clashtv/id1468675126
     </div>
   )
 }
+
+export default NewsFull

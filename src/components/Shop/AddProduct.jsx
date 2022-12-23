@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createProduct } from "../../features/product.slice";
+import { createProduct } from "../../Features/product.slice";
 import styles from "../Products/Add.Product.module.css";
 
 const AddProduct = () => {
@@ -59,7 +59,7 @@ const AddProduct = () => {
     <>
       <div className={styles.form}>
         <h1 className={styles.form_text}>Добавление нового товара</h1>
-        <form className={styles.form}>
+        <form className={styles.prod_form}>
           <div className={styles.form_group}>
             <label>Наименование</label>
             <input

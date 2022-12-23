@@ -1,27 +1,25 @@
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
-import Main from './components/main/Main';
-import Header from './components/header/Header';
-import Chemp from './components/chemp/Chemp';
-import Merch from './components/merch/Merch';
-import Life from './components/life/Life';
-import Gallery from './components/gallery/gallery';
+import HomePage from './components/HomePage';
+import Layot from './components/Layot';
+import AboutUs from './components/HomePage/About/AboutUs';
+import NewsFull from './components/News/newsFull/NewsFull';
+import Shop from './components/Shop/Shop';
 
 function App() {
- 
   return (
     <div className="App">
-      <div className='fon'>
-        <Header/>
-        <Main/>
-      </div>
-      <Chemp/>
-      <Merch/>
-      <Life/>
-      <Gallery/>
-
+      <Routes>
+        <Route path='/' element={<Layot/>}>
+          <Route index element={<HomePage/>}/>
+          <Route path='/about' element={<AboutUs/>}/>
+          <Route path='/news' element={<NewsFull/>}/>
+          <Route path='/shop' element={<Shop/>}/>
+        </Route>
+      </Routes>
     </div>
   );
-    }
+}
 
 
 export default App;
