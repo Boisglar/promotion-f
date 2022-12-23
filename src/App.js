@@ -1,18 +1,24 @@
 import './App.css';
-import Registration from './components/auth/Authorization';
-import Users from './components/users/Users';
-import AddFighter from './components/fighters/AddFighter';
-import NewsGet from './components/news/newsGet/NewsGet';
-import NewsFull from "./components/news/newsFull/NewsFull"
+import Main from './components/main/Main';
+import Header from './components/header/Header';
+import Chemp from './components/chemp/Chemp';
+import Merch from './components/merch/Merch';
+import Life from './components/life/Life';
+import Gallery from './components/gallery/gallery';
 
 function App() {
  
   return (
     <div className="App">
+      <div className='fon'>
+        <Header/>
+        <Main/>
+      </div>
+      <Chemp/>
+      <Merch/>
+      <Life/>
+      <Gallery/>
 
-      <Registration/>
-      <Users/>  
-      <NewsFull/>
     </div>
   );
     }
