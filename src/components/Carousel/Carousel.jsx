@@ -14,6 +14,7 @@ export default class Responsive extends Component {
         autoplaySpeed: 2000,
         pauseOnHover: true
       };
+      
     return (
       <div className="slide-item">
         <h2> Responsive </h2>
