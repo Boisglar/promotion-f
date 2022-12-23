@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import authSlice from "../features/auth.slice";
 import fightersSlice from "../features/fighters.slice";
 import users from "../features/newsSlice"
 import weightCategoriesSlice from "../features/weightCategories.slice";
@@ -11,7 +12,8 @@ const store = configureStore({
         news: users,
         wCategories: weightCategoriesSlice,
         cart: cartSlice,
-        products: productSlice
+        products: productSlice,
+        users: authSlice,
     }
 })
 

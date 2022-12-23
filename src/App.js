@@ -1,24 +1,27 @@
 import './App.css';
-import NewsAdd from './components/news/NewsAdd';
-import NewsGet from './components/news/NewsGet';
-import AddProduct from './components/Products/AddProduct';
-import Shop from './components/Products/Shop';
-import Product from './components/Products/Product';
-import Cart from './components/Cart/Cart';
+import Main from './components/main/Main';
+import Header from './components/header/Header';
+import Chemp from './components/chemp/Chemp';
+import Merch from './components/merch/Merch';
+import Life from './components/life/Life';
+import Gallery from './components/gallery/gallery';
 
 function App() {
-    return (
-        <div className ="App">
-            <AddProduct />
-            {/* <Shop /> */}
-            {/* <Cart /> */}
-            {/* < Product /> */}
-            {/* <NewsGet/> */}
-              {/* <AddFighter/> */}
-            {/* <NewsAdd/> */}
-        </div>
-    )
+ 
+  return (
+    <div className="App">
+      <div className='fon'>
+        <Header/>
+        <Main/>
+      </div>
+      <Chemp/>
+      <Merch/>
+      <Life/>
+      <Gallery/>
 
-}
+    </div>
+  );
+    }
+
 
 export default App;
