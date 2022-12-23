@@ -1,0 +1,29 @@
+form {
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+}
+
+.form_text {
+    text-align: center;
+}
+
+
+.form_group {
+    margin-bottom: 15px;
+}
+
+.form_input {
+    padding: 5px;
+    display: block;
+    width: 50%;
+}
+
+.form_textarea {
+    width: 200px;
+    height: 150px;
+}
+
+.img_input {
+    display: block;
+}
