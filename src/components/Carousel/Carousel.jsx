@@ -5,7 +5,7 @@ import "../Carousel/Carousel.css"
 export default class Responsive extends Component {
   render()
    {
-    var settings = {
+    const settings = {
         dots: true,
         infinite: true,
         slidesToShow: 3,
@@ -13,7 +13,7 @@ export default class Responsive extends Component {
         autoplay: true,
         autoplaySpeed: 2000,
         pauseOnHover: true
-      };
+      }
       
     return (
       <div className="slide-item">

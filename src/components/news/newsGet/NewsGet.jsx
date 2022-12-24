@@ -4,21 +4,23 @@ import { getNews } from "../../../features/newsSlice";
 import "../newsGet/NewsGet.css";
 
 export default function NewsGet() {
-  // const news = useSelector((state) => state.news.news)
-  // const loading = useSelector((state) => state.loading)
-  // const error = useSelector((state) => state.error)
-  // const dispatch = useDispatch()
+  const news = useSelector((state) => state.news.news)
+  const loading = useSelector((state) => state.loading)
+  const error = useSelector((state) => state.error)
+  const dispatch = useDispatch()
 
-  // useEffect(() => {
-  //   dispatch(getNews())
-  // }, [dispatch])
+  console.log(news);
 
-  // if(loading) {
-  //   return <h3>....LOADIND</h3>
-  // }
-  // if (error) {
-  //   return <h3>ERROR:</h3>
-  // }
+  useEffect(() => {
+    dispatch(getNews())
+  }, [dispatch])
+
+  if(loading) {
+    return <h3>....LOADIND</h3>
+  }
+  if (error) {
+    return <h3>ERROR:</h3>
+  }
 
   return (
     <div className="newsPages">

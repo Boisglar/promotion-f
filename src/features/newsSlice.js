@@ -11,6 +11,7 @@ export const getNews = createAsyncThunk("news/get", async (data, thunkAPI) => {
     try {
         const res = await fetch("http://localhost:4000/news")
         const news = await res.json()
+        
         if(news.error) {
             return thunkAPI.rejectWithValue(news.error)
         }
@@ -34,7 +35,6 @@ try {
         })
     })
     const news = await res.json()
-    console.log(news);
     if (news.error) {
         return thunkAPI.rejectWithValue(news.error)
     }

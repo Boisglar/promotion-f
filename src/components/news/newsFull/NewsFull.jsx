@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import "./NewsFull.css"
 
-export default function newsFull() {
+export default function NewsFull() {
+  const user = useSelector((state)=>state.users.user)
+  const loader = useSelector((state) => state.news.loader)
+  const commentLoader = useSelector((state) => state.comments.loader)
+  const commentError = useSelector((state) => state.comments.error)
+  const news = useSelector((state) => state.news.news)
+
+const [commentText, setCommentText] = useState("")
+
+
   return (
     <div className="newsFull">
         <div>
@@ -52,7 +62,7 @@ apps.apple.com/tt/app/clashtv/id1468675126
     <div className='add-comment-item'>
       <h4>Добавить комментарий</h4>
       <div className='add-comment'>
-      <textarea name="text" id="comment" cols="30" rows="10"></textarea>
+      <textarea name="text" id="comment" cols="30" rows="10" value={commentText} onChange={(e) => setCommentText(e.target.value)}></textarea>
       <button className='button'>Отправить</button>
       </div>
     </div>
