@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkAuth, logout, modalState } from '../../Features/auth.slice';
 import styles from './Authorization.module.css'
-
 import LoginForm from './LoginForm';
 import Registration from './Registration';
 
@@ -28,7 +27,7 @@ const Authorization = () => {
     }
 
     return (
-        <div className={styles.wrapper}>
+      <div className={styles.wrapper}>
           <div className={styles.top_div} onClick={handleModal}></div>
           <div className={styles.middle_main}>
             <div className={styles.middle_div} onClick={handleModal}></div>
@@ -37,7 +36,6 @@ const Authorization = () => {
               {!isAuth && !registration && <Registration/>}
               {!isAuth && registration && <div className={styles.sub}>Если нет аккаунта,<div onClick={() => setRegistration(!registration)} className={styles.sub_word}> Зарегистрируйтесь</div></div>}
               {!isAuth && !registration && <div className={styles.sub}>Если уже есть аккаунт,<div onClick={() => setRegistration(!registration)} className={styles.sub_word}> Ввойдите</div></div>}
-              
               {isAuth && 
                 <div className={styles.logout}>
                   <div className={styles.user}>Добро пожаловать, {user.firstName}</div>

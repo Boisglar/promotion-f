@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Header.module.scss'
 import image from "../header/LOGO.png"
@@ -6,7 +6,6 @@ import login from './login.png'
 import Authorization from '../../Auth/Authorization'
 import { useDispatch, useSelector } from 'react-redux'
 import { modalState } from '../../../Features/auth.slice'
-
 export default function Header() {
   const dispatch = useDispatch()
   const isAuth = useSelector((state) => state.users.isAuth)
@@ -16,6 +15,11 @@ export default function Header() {
   const handleActive = () => {
     dispatch(modalState())
   }
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    body.style.overflow = modal ? 'hidden' : 'auto';
+  }, [modal])
 
   return (
     <>

@@ -18,13 +18,14 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
+    "react-remove-scroll": "^2.5.5",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-yandex-maps": "^4.6.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4",
-    "tinymce": "^6.3.1"
+    "tinymce": "^6.3.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
