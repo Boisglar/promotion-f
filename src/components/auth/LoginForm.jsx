@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../Features/auth.slice';
+import styles from './Authorization.module.css'
 
 const LoginForm = () => {
     const dispatch = useDispatch()
@@ -12,11 +13,12 @@ const LoginForm = () => {
         dispatch(login({ email, password }))
     }
     return (
-        <div>
-            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button onClick={handleLogin}>LOGIN</button>
-            {error && <div>{error}</div>}
+        <div className={styles.login_form}>
+            <h2 className={styles.title}>Введите логин и пароль</h2>
+            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} className={styles.input} />
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className={styles.input} />
+            <button onClick={handleLogin} className={styles.button_log}>ВОЙТИ</button>
+            {error && <div className={styles.error}>{error}</div>}
         </div>
     );
 };

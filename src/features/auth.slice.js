@@ -6,7 +6,8 @@ const initialState = {
     allUsers: [],
     isAuth: false,
     loading: false,
-    error: null
+    error: null,
+    modal: false
 }
 
 export const registration = createAsyncThunk(
@@ -70,6 +71,9 @@ const authSlice = createSlice({
         usersState(state, action) {
             state.allUsers = action.payload
         },
+        modalState(state, action) {
+            state.modal = !state.modal
+        }
     },
     extraReducers: (builder) => {
         builder
@@ -129,5 +133,7 @@ const authSlice = createSlice({
 })
 
 export const { usersState } = authSlice.actions;
+
+export const { modalState } = authSlice.actions;
 
 export default authSlice.reducer

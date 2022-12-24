@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createProduct } from "../../Features/product.slice";
-import styles from "../Products/Add.Product.module.css";
+import styles from './AddProduct.module.css';
 
 const AddProduct = () => {
   const dispatch = useDispatch();

@@ -5,6 +5,7 @@ import Layot from './components/Layot';
 import AboutUs from './components/HomePage/About/AboutUs';
 import NewsFull from './components/News/newsFull/NewsFull';
 import Shop from './components/Shop/Shop';
+import Admin from './components/Admin';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/about' element={<AboutUs/>}/>
           <Route path='/news' element={<NewsFull/>}/>
           <Route path='/shop' element={<Shop/>}/>
+          <Route path='/admin' element={<Admin/>}/>
         </Route>
       </Routes>
     </div>

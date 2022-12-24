@@ -28,24 +28,24 @@ export default function Chemp() {
                             <h2 className={styles.h2}>Яндаев Ризван</h2>
                             <div className={styles.rec}>
                                 <p>Псевдоним:</p>
-                                <d>Кочевник</d>
+                                <p>Кочевник</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Вес:</p>
-                                <d>84кг. средний</d>
+                                <p>84кг. средний</p>
                             </div>
                             <h3 className={styles.h3}>Рекорд</h3>
                             <div className={styles.rec}>
                                 <p>Побед:</p>
-                                <d>20</d>
+                                <p>20</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Поражений:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Ничья:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                         </div>
                         <img className={styles.images} src={image1} alt=''/>
@@ -58,24 +58,24 @@ export default function Chemp() {
                             <h2 className={styles.h2}>Абдразаков Асхаб</h2>
                             <div className={styles.rec}>
                                 <p>Псевдоним:</p>
-                                <d>Мудрый</d>
+                                <p>Мудрый</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Вес:</p>
-                                <d>77кг. полусредний</d>
+                                <p>77кг. полусредний</p>
                             </div>
                             <h3 className={styles.h3}>Рекорд</h3>
                             <div className={styles.rec}>
                                 <p>Побед:</p>
-                                <d>12</d>
+                                <p>12</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Поражений:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Ничья:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                         </div>
                         <img className={styles.images} src={image2} alt=''/>
@@ -88,24 +88,24 @@ export default function Chemp() {
                             <h2 className={styles.h2}>Байраев Лом-Али</h2>
                             <div className={styles.rec}>
                                 <p>Псевдоним:</p>
-                                <d>Умный</d>
+                                <p>Умный</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Вес:</p>
-                                <d>63кг. полулегкий</d>
+                                <p>63кг. полулегкий</p>
                             </div>
                             <h3 className={styles.h3}>Рекорд</h3>
                             <div className={styles.rec}>
                                 <p>Побед:</p>
-                                <d>20</d>
+                                <p>20</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Поражений:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Ничья:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                         </div>
                         <img className={styles.images} src={image3} alt=''/>
@@ -118,24 +118,24 @@ export default function Chemp() {
                             <h2 className={styles.h2}>Мехтиев Дени</h2>
                             <div className={styles.rec}>
                                 <p>Псевдоним:</p>
-                                <d>Механик</d>
+                                <p>Механик</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Вес:</p>
-                                <d>93кг. полутяжелый</d>
+                                <p>93кг. полутяжелый</p>
                             </div>
                             <h3 className={styles.h3}>Рекорд</h3>
                             <div className={styles.rec}>
                                 <p>Побед:</p>
-                                <d>24</d>
+                                <p>24</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Поражений:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Ничья:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                         </div>
                         <img className={styles.images} src={image4} alt=''/>
@@ -150,24 +150,24 @@ export default function Chemp() {
                             <h2 className={styles.h2}>Янгулбаев Малик</h2>
                             <div className={styles.rec}>
                                 <p>Псевдоним:</p>
-                                <d>Скала</d>
+                                <p>Скала</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Вес:</p>
-                                <d>77кг. полусредний</d>
+                                <p>77кг. полусредний</p>
                             </div>
                             <h3 className={styles.h3}>Рекорд</h3>
                             <div className={styles.rec}>
                                 <p>Побед:</p>
-                                <d>18</d>
+                                <p>18</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Поражений:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Ничья:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                         </div>
                         <img className={styles.images} src={image5} alt=''/>
@@ -180,24 +180,24 @@ export default function Chemp() {
                             <h2 className={styles.h2}>Цуров Адам</h2>
                             <div className={styles.rec}>
                                 <p>Псевдоним:</p>
-                                <d>Гитлер</d>
+                                <p>Гитлер</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Вес:</p>
-                                <d>120кг. тяжелый</d>
+                                <p>120кг. тяжелый</p>
                             </div>
                             <h3 className={styles.h3}>Рекорд</h3>
                             <div className={styles.rec}>
                                 <p>Побед:</p>
-                                <d>2000</d>
+                                <p>2000</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Поражений:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Ничья:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                         </div>
                         <img className={styles.images} src={image6} alt=''/>
@@ -210,24 +210,24 @@ export default function Chemp() {
                             <h2 className={styles.h2}>Джукаев Дени</h2>
                             <div className={styles.rec}>
                                 <p>Псевдоним:</p>
-                                <d>Добряк</d>
+                                <p>Добряк</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Вес:</p>
-                                <d>100кг. тяжелый</d>
+                                <p>100кг. тяжелый</p>
                             </div>
                             <h3 className={styles.h3}>Рекорд</h3>
                             <div className={styles.rec}>
                                 <p>Побед:</p>
-                                <d>200</d>
+                                <p>200</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Поражений:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Ничья:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                         </div>
                         <img className={styles.images} src={image7} alt=''/>
@@ -240,24 +240,24 @@ export default function Chemp() {
                             <h2 className={styles.h2}>Мартазанов Саид</h2>
                             <div className={styles.rec}>
                                 <p>Псевдоним:</p>
-                                <d>Препод</d>
+                                <p>Препод</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Вес:</p>
-                                <d>70кг. легкий</d>
+                                <p>70кг. легкий</p>
                             </div>
                             <h3 className={styles.h3}>Рекорд</h3>
                             <div className={styles.rec}>
                                 <p>Побед:</p>
-                                <d>16</d>
+                                <p>16</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Поражений:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                             <div className={styles.rec}>
                                 <p>Ничья:</p>
-                                <d>0</d>
+                                <p>0</p>
                             </div>
                         </div>
                         <img className={styles.images} src={image8} alt=''/>

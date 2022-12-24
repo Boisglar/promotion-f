@@ -25,12 +25,14 @@
     display: flex;
     margin-bottom: 15px;
 }
-a{
+
+.alink{
     text-decoration: none;
     background-color: rgb(47, 47, 47);
     margin-right: 15px;
 }
-a:hover{
+
+.alink:hover{
     color: #d30505;
 }
 .cardNews{
