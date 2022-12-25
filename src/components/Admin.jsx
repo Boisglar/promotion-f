@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import AddFighter from './Fighters/AddFighter';
-import PostNews from './News/PostNews';
+import AddFighter from "./fighters/AddFighter";
+import PostNews from "./news/PostNews"
 import AddProduct from './Shop/AddProduct';
 
 const Admin = () => {

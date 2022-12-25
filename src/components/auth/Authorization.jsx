@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { checkAuth, logout, modalState } from '../../Features/auth.slice';
+import { checkAuth, logout, modalState } from "../../features/auth.slice";
 import styles from './Authorization.module.css'
 import LoginForm from './LoginForm';
 import Registration from './Registration';

@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { postFighter } from '../../Features/fighters.slice';
-import { getWeightCategories } from '../../Features/weightCategories.slice';
+import { postFighter } from '../../features/fighters.slice';
+import { getWeightCategories } from "../../features/weightCategories.slice";
 
 const AddFighter = () => {
     const [firstName, setFirstName] = useState('')
