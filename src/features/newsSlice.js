@@ -21,20 +21,20 @@ export const getNews = createAsyncThunk("news/get", async (data, thunkAPI) => {
         return thunkAPI.rejectWithValue(error)
     }
 })
-export const addNews = createAsyncThunk("news/post", async ({header, image, text}, thunkAPI) => {
+export const addNews = createAsyncThunk("news/post", async ({title, photo, description}, thunkAPI) => {
+    const formData = new FormData()
+    formData.append("heading", title)
+    formData.append("text", description)
+    formData.append("img", photo)
+
 try {
+    console.log(photo);
     const res = await fetch ("http://localhost:4000/createNews", {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            heading: header,
-            image: image,
-            text: text,
-        })
+        body: formData
     })
     const news = await res.json()
+    console.log(news);
     if (news.error) {
         return thunkAPI.rejectWithValue(news.error)
     }
@@ -65,7 +65,7 @@ export const deleteNews = createAsyncThunk("news/delete", async (id, thunkAPI) =
 
 })
 
-const userSlice = createSlice({
+const newsSlice = createSlice({
     name: "news",
     initialState,
     reducers: {},
@@ -100,4 +100,4 @@ const userSlice = createSlice({
     }
 })
 
-export default userSlice.reducer
+export default newsSlice.reducer

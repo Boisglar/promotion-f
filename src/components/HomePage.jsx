@@ -1,0 +1,24 @@
+import React from 'react';
+// import Responsive from './HomePage/Carousel/Carousel';
+import Chemp from './HomePage/chemp/Chemp';
+import Gallery from './HomePage/gallery/gallery';
+import Life from './HomePage/main/life/Life';
+import Main from './HomePage/main/Main';
+import Merch from './HomePage/merch/Merch';
+import Points from './HomePage/points/Points';
+
+const HomePage = () => {
+    return (
+        <div>
+            <Main/>
+            <Chemp/>
+            {/* <Responsive/> */}
+            <Merch/>
+            <Life/>
+            <Points/>
+            <Gallery/>
+        </div>
+    );
+};
+
+export default HomePage;

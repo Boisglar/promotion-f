@@ -68,6 +68,7 @@ export const updateProduct = createAsyncThunk(
         body: JSON.stringify(data),
       });
       const product = res.json();
+      return thunkAPI.fulfillWithValue(product)
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }

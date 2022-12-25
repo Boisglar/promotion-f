@@ -10,8 +10,6 @@
      const [images, setImages] = useState('')
      let image = ''
 
-   
-
      const handleImg = async () => {
          try {
              const data = new FormData()
