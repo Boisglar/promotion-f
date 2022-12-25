@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { postFighter } from '../../Features/fighters.slice';
 import { getWeightCategories } from '../../Features/weightCategories.slice';
+import styles from './AddFighter.module.css'
 
 const AddFighter = () => {
     const [firstName, setFirstName] = useState('')
@@ -49,22 +50,23 @@ const AddFighter = () => {
     }
 
     return (
-        <div>
-            <div>Имя: <input type="text" placeholder='  Имя' value={firstName} onChange={(e) => setFirstName((x) => e.target.value)} /></div>
-            <div>Фамилия: <input type="text" placeholder='  Фамилия' value={lastName} onChange={(e) => setLastname((x) => e.target.value)} /></div>
-            <div>Псевдоним: <input type="text" placeholder='  Псевдоним' value={alias} onChange={(e) => setAlias((x) => e.target.value)} /></div>
-            <div>Возраст: <input type="text" value={age} onChange={(e) => setAge((x) => e.target.value)} /></div>
-            <div>Весовая категория:
-                <select value={weight} onChange={(event) => setWeight((x) => event.target.value)}>
+        <div className={styles.main}>
+            <div className={styles.item}>Имя: <input type="text" placeholder='  Имя' value={firstName} onChange={(e) => setFirstName((x) => e.target.value)} className={styles.input} /></div>
+            <div className={styles.item}>Фамилия: <input type="text" placeholder='  Фамилия' value={lastName} onChange={(e) => setLastname((x) => e.target.value)} className={styles.input}/></div>
+            <div className={styles.item}>Псевдоним: <input type="text" placeholder='  Псевдоним' value={alias} onChange={(e) => setAlias((x) => e.target.value)} className={styles.input}/></div>
+            <div className={styles.item}>Возраст: <input type="text" value={age} onChange={(e) => setAge((x) => e.target.value)} className={styles.input}/></div>
+            <div className={styles.item}>Весовая категория:
+                <select value={weight} onChange={(event) => setWeight((x) => event.target.value)} className={styles.input}>
+                    <option></option>
                     {categories.map((item) => <option value={item._id}>{item.name}</option>)}
                 </select>
-            </div>
-            <div>Рост: <input type="text" placeholder='  Рост' value={height} onChange={(e) => setHeight((x) => e.target.value)} /></div>
-            <div>Победы: <input type="text" value={win} onChange={(e) => setWin((x) => e.target.value)} /></div>
-            <div>Ничьи: <input type="text" value={draw} onChange={(e) => setDraw((x) => e.target.value)} /></div>
-            <div>Поражения: <input type="text" value={loss} onChange={(e) => setLoss((x) => e.target.value)} /></div>
-            <div>Фотография: <input type="file" name="image" onChange={(e) => setImg((x) => e.target.files[0])} /></div>
-            <button onClick={() => addFighter()}>Добавить</button>
+            </div >
+            <div className={styles.item}>Рост: <input type="text" placeholder='  Рост' value={height} onChange={(e) => setHeight((x) => e.target.value)} className={styles.input}/></div>
+            <div className={styles.item}>Победы: <input type="text" value={win} onChange={(e) => setWin((x) => e.target.value)} className={styles.input}/></div>
+            <div  className={styles.item}>Ничьи: <input type="text" value={draw} onChange={(e) => setDraw((x) => e.target.value)} className={styles.input}/></div>
+            <div className={styles.item}>Поражения: <input type="text" value={loss} onChange={(e) => setLoss((x) => e.target.value)} className={styles.input} /></div>
+            <div className={styles.item}>Фотография: <input type="file" name="image" onChange={(e) => setImg((x) => e.target.files[0])} className={styles.image}/></div>
+            <button onClick={() => addFighter()} className={styles.button}>Добавить</button>
         </div>
     );
 };

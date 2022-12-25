@@ -1,0 +1,51 @@
+.photo {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin: 5px;
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.span {
+    position: absolute;
+    top: 70px;
+    left: 25px;
+    background-color: rgb(190, 48, 48);
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.img {
+    max-width: 150px;
+    height: 150px;
+    margin: 5px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: rgb(86, 86, 86);
+}
+
+.editor {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.inp {
+    margin-top: 5px;
+    color: white;
+}
+
+.btn {
+    background-color: rgb(78, 78, 78);
+    border: 1px solid red;
+    border-radius: 3px;
+    color: white;
+    margin: 10px;
+}

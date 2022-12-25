@@ -27,14 +27,14 @@ export default function Header() {
       <div className={styles.header}>
           <NavLink to={'/'}><img src={image} className={styles.image} alt={'fighter'}/></NavLink>
           <ul className={styles.list}>
-              <li className={styles.li}><NavLink to={'/about'}>О нас</NavLink></li>
-              <li className={styles.li}><NavLink></NavLink>Турниры</li>
-              <li className={styles.li}>Бойцы</li>
-              <li className={styles.li}><NavLink to={'/news'}>Новости</NavLink></li>
-              <li className={styles.li}><NavLink to={'/shop'}>Магазин</NavLink></li>  
+              <li><NavLink className={styles.li} to={'/about'}>О НАС</NavLink></li>
+              <li><NavLink className={styles.li} to={'/'}>ТУРНИРЫ</NavLink></li>
+              <li><NavLink className={styles.li}>БОЙЦЫ</NavLink></li>
+              <li><NavLink className={styles.li} to={'/news'}>НОВОСТИ</NavLink></li>
+              <li><NavLink className={styles.li} to={'/shop'}>МАГАЗИН</NavLink></li>  
           </ul>
           <div className={styles.login}>
-            {isAuth && user.roles.includes('ADMIN') && <div className={styles.admin}><NavLink to={'/admin'}>Администрирование</NavLink></div>}
+            {isAuth && user.roles.includes('ADMIN') && <div ><NavLink className={styles.admin} to={'/admin'}>АДМИНИСТРИРОВАНИЕ</NavLink></div>}
             <img src={login} alt="Авторизация" className={styles.login_img} onClick={handleActive}/>
             </div>
       </div>
