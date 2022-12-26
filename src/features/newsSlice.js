@@ -6,17 +6,14 @@ const initialState = {
     loading: false
 }
 
-
 export const getNews = createAsyncThunk("news/get", async (data, thunkAPI) => {
     try {
         const res = await fetch("http://localhost:4000/news")
         const news = await res.json()
-        
         if(news.error) {
             return thunkAPI.rejectWithValue(news.error)
         }
-        return news;
-        
+        return thunkAPI.fulfillWithValue(news)
     } catch (error) {
         return thunkAPI.rejectWithValue(error)
     }
@@ -28,24 +25,20 @@ export const addNews = createAsyncThunk("news/post", async ({title, photo, descr
     formData.append("img", photo)
 
 try {
-    console.log(photo);
     const res = await fetch ("http://localhost:4000/createNews", {
         method: 'POST',
         body: formData
     })
     const news = await res.json()
-
-
-    console.log("NEWS",news);
     if (news.error) {
         return thunkAPI.rejectWithValue(news.error)
     }
     return thunkAPI.fulfillWithValue(news)
-    
 } catch (error) {
     return thunkAPI.rejectWithValue(error.message)
 }
 })
+
 export const deleteNews = createAsyncThunk("news/delete", async (id, thunkAPI) => {
     try {
         const res = await fetch(`http://localhost:4000/news/${id}`, {
@@ -55,12 +48,10 @@ export const deleteNews = createAsyncThunk("news/delete", async (id, thunkAPI) =
             }
         })
         const news = res.json()
-
         if (news.error) {
             return thunkAPI.rejectWithValue(news.error)
         }
         return thunkAPI.fulfillWithValue(news)
-
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message)
     }

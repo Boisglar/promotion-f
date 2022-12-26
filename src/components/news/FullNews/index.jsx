@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./NewsFull.css";
 import { useParams } from "react-router-dom";
-import { getNews } from "../../../Features/newsSlice";
-import { addComments, getComments } from "../../../Features/comment.slice";
+import { getNews } from "../../../features/newsSlice";
+import { addComments, getComments } from "../../../features/comment.slice";
 
 function NewsFull() {
   const { id } = useParams();
@@ -25,7 +25,8 @@ function NewsFull() {
 
   const handleAddComment = () => {
     if(commentText !== "") {
-      return dispatch(addComments({commentText, id, author: '63a2cfa6875fe9d82d3af070'})), setCommentText("")
+      dispatch(addComments({commentText, id, author: '63a2cfa6875fe9d82d3af070'}))
+      setCommentText("")
     }
     return false
   }

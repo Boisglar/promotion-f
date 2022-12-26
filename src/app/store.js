@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authSlice from "../Features/auth.slice";
-import fightersSlice from "../Features/fighters.slice";
-import newsSlice from "../Features/newsSlice"
-import weightCategoriesSlice from "../Features/weightCategories.slice";
-import productSlice from "../Features/product.slice";
-import cartSlice from "../Features/cart.slice";
-import commentSlice from "../Features/comment.slice";
+import authSlice from "../features/auth.slice";
+import fightersSlice from "../features/fighters.slice";
+import newsSlice from "../features/newsSlice"
+import weightCategoriesSlice from "../features/weightCategories.slice";
+import productSlice from "../features/product.slice";
+import cartSlice from "../features/cart.slice";
+import commentSlice from "../features/comment.slice";
 
 const store = configureStore({
     reducer: {

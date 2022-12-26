@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getNews } from "../../../Features/newsSlice";
+import { NavLink } from "react-router-dom";
+import { getNews } from "../../../features/newsSlice";
 import NewsCart from "../NewsCart";
 import "./NewsGet.css";
 
@@ -28,9 +29,9 @@ export default function NewsGet() {
       <div className="headerNewsPage">
         <div className="headerNews">Новости</div>
         <div className="filterNews">
-          <a className="alink" href="#">Последние</a>
-          <a className="alink" href="#">Обсуждаемые</a>
-          <a className="alink" href="#">Популярные</a>
+          <NavLink to={'/'}>Последние</NavLink>
+          <NavLink to={'/'}>Обсуждаемые</NavLink>
+          <NavLink to={'/'}>Популярные</NavLink>
         </div>
       </div>
       <div className="outputNews">

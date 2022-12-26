@@ -1,33 +1,38 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { getProduct } from "../../Features/product.slice";
-import styles from "../Products/Product.module.css";
+import { NavLink, useParams } from "react-router-dom";
+import { getProduct } from "../../features/product.slice";
+import { addToCart } from "../../features/cart.slice";
+import styles from "./Product.module.scss";
 import img2 from "./photo/basket.png";
-import Cart from "./Cart/Cart";
-
 const Product = () => {
   const dispatch = useDispatch();
-  const active = useSelector((state) => state.cart.active);
   const product = useSelector((state) => state.products.product);
   const { id } = useParams();
   useEffect(() => {
-    dispatch(getProduct("63a4ef5825057ac2e4584bd1"));
+    dispatch(getProduct(id));
   }, [dispatch, id]);
 
   if (!product) {
     return <div>loading</div>;
   }
 
+  const handleAddCart = (id) => {
+    dispatch(addToCart(id));
+};
+
   return (
-    <>
+    <div className={styles.main_page}>
       <div className={styles.item_header}>
         <div className={styles.item_name}>
           <div>{product.name}</div>
         </div>
         <div className={styles.basket_cart}>
-          <img className={styles.basket} src={img2} alt="" onClick />
-          {active && <Cart />}
+          <NavLink to="/cart">
+            <div className={styles.basket_div}>
+              <img className={styles.basket} onClick={() => handleAddCart(product._id)} src={img2} alt="" />
+            </div>
+          </NavLink>
         </div>
       </div>
 
@@ -40,18 +45,18 @@ const Product = () => {
             alt=""
           />
         </div>
-        <div>
-          <div>
+        <div className={styles.product_main}>
+          <div className={styles.product_info}>
             <h3>Модель</h3>
             <div>{product.model}</div>
           </div>
-          <div>
+          <div className={styles.product_info}>
             <p>Состав:{product.composition}</p>
           </div>
-          <div>
+          <div className={styles.product_info}>
             <p>Цвет:{product.color}</p>
           </div>
-          <div>
+          <div className={styles.product_info}>
             <h2 className={styles.descript_item}>Описание товара</h2>
             <div>{product.description}</div>
           </div>
@@ -61,7 +66,7 @@ const Product = () => {
           <button className={styles.cart_btn}>Добавить в корзину</button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

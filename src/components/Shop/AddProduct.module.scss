@@ -1,0 +1,52 @@
+.form {
+    margin: auto;
+}
+
+.form {
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+}
+
+.form_text {
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.form_group {
+    margin-bottom: 25px;
+    color: #fff;
+    text-align: left;
+    margin-left: 150px;
+    width: 850px;
+    border-radius: 10px;
+
+}
+
+.form_input {
+    padding: 5px;
+    display: block;
+    width: 50%;
+}
+
+.form_textarea {
+    width: 435px;
+    height: 150px;
+}
+
+.img_input {
+    display: block;
+}
+
+.add_btn {
+    width: 400px;
+    font-size: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.add_btn:hover {
+    background-color: red;
+}

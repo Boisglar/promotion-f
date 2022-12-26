@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { addNews } from "../../../Features/newsSlice";
+import { useDispatch } from "react-redux";
+import { addNews } from "../../../features/newsSlice";
 // import { addNews } from "../../redux/features/news";
 import style from "./NewsForm.module.css";
 

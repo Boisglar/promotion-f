@@ -22,9 +22,14 @@
 }
 
 .admin {
-    font-size: 18px;
+    font-size: 12px;
     margin-right: 20px;
-    color: red;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: rgb(59, 59, 59);
 }
 
 .header {
@@ -34,6 +39,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    width: 100%;
 }
 
 .list {

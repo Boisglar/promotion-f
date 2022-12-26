@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createProduct } from "../../Features/product.slice";
-import styles from './AddProduct.module.css';
+import { createProduct } from "../../features/product.slice";
+import styles from './AddProduct.module.scss';
 
 const AddProduct = () => {
   const dispatch = useDispatch();
@@ -43,6 +43,13 @@ const AddProduct = () => {
 
   const handleAdd = (e) => {
     e.preventDefault();
+    setImage("")
+    setName("")
+    setModel("")
+    setPrice(0)
+    setSize("")
+    setColor("")
+    setComposition("")
     dispatch(
       createProduct({
         image,
@@ -57,9 +64,9 @@ const AddProduct = () => {
 
   return (
     <>
-      <div className={styles.form}>
+      <div className={styles.main}>
         <h1 className={styles.form_text}>Добавление нового товара</h1>
-        <form className={styles.prod_form}>
+        <form onSubmit={handleAdd} className={styles.form}>
           <div className={styles.form_group}>
             <label>Наименование</label>
             <input

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { registration } from '../../Features/auth.slice';
+import { registration } from "../../features/auth.slice";
 import styles from './Authorization.module.css'
 
 const Registration = () => {

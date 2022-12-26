@@ -9,7 +9,7 @@ export default function NewsCart({ image, heading, _id }) {
         <img
           width={"100%"}
           src={`http://localhost:4000/${image}`}
-          alt="news-image"
+          alt="news-ima"
         />
         <div className="heading-news">{heading}</div>
       </div>
