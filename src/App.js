@@ -3,11 +3,13 @@ import './App.css';
 import HomePage from './components/HomePage';
 import Layot from './components/Layot';
 import AboutUs from './components/HomePage/About/AboutUs';
-import NewsFull from "./components/news/newsFull/NewsFull";
+
 import Shop from './components/Shop/Shop';
 import Admin from './components/Admin';
-import Cart from './components/Shop/Cart/Cart';
-import Product from './components/Shop/Product';
+import NewsGet from './components/News/AllNews/NewsGet';
+import NewsFull from './components/News/FullNews';
+import NewsForm from './components/News/NewsForm';
+
 function App() {
   return (
     <div className="App">
@@ -15,7 +17,9 @@ function App() {
         <Route path='/' element={<Layot/>}>
           <Route index element={<HomePage/>}/>
           <Route path='/about' element={<AboutUs/>}/>
-          <Route path='/news' element={<NewsFull/>}/>
+          <Route path='/news' element={<NewsGet/>}/>
+          <Route path='/news/:id' element={<NewsFull/>}/>
+          <Route path='/news-form/' element={<NewsForm/>}/>
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/admin' element={<Admin/>}/>
           <Route path="/cart" element = {<Cart/>} />

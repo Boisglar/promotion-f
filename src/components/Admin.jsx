@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AddFighter from "./fighters/AddFighter";
 import PostNews from "./news/PostNews"
 import AddProduct from './Shop/AddProduct';
+import styles from './Main.module.css'
 
 const Admin = () => {
     const [fighter, setFighter] = useState(false)
@@ -28,10 +29,10 @@ const Admin = () => {
 
     return (
         <div>
-            <div>
-                <button onClick={handleFighter}>Добавить бойца</button>
-                <button onClick={handleNews}>Добавить новость</button>
-                <button onClick={handleProd}>Добавить товар</button>
+            <div >
+                <button className={styles.button} onClick={handleFighter}>Добавить бойца</button>
+                <button className={styles.button} onClick={handleNews}>Добавить новость</button>
+                <button className={styles.button} onClick={handleProd}>Добавить товар</button>
             </div>
             <div>
                 {prod && <AddProduct/>}

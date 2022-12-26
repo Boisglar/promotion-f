@@ -2,6 +2,7 @@
  import React, { useRef, useState } from 'react';
  import axios from 'axios';
  import LoadedImages from './LoadedImages';
+ import styles from './LoadedImages.module.css'
 
  const PostNews = () => {
      const [img, setImg] = useState([])
@@ -32,11 +33,8 @@
          console.log(editorRef.current.getContent());
    }
 
-    console.log(images.data);
-
-
     return (
-        <div>
+        <div className={styles.editor}>
             <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 init={{
@@ -54,15 +52,14 @@
                     ]
                 }}
             />
-            <input type="file" name='post' multiple='multiple' onChange={(e) => setImg((x) => e.target.files)} />
-            <button onClick={handleImg}>Загрузить и получить ссылку</button>
-            <button type='button' onClick={handlePost}>Сохранить</button>
-            {load && images.data.map((item) => <LoadedImages path={item.path}/>)}
-            <div dangerouslySetInnerHTML={{__html: `<p>Hello World, How your wife and childs?</p><p><img src="http://localhost:4000/images/post/16122022-225857_404_13pro_max_8.jpg" alt="" width="308" height="395"></p>
-<h1>This is first blog</h1>`}}></div>
+            <input className={styles.inp} type="file" name='post' multiple='multiple' onChange={(e) => setImg((x) => e.target.files)} />
+            <button className={styles.btn} onClick={handleImg}>Загрузить и получить ссылку</button>
+            <button className={styles.btn} type='button' onClick={handlePost}>Сохранить</button>
+            {load && <div className={styles.main}>{images.data.map((item) => <LoadedImages path={item.path}/>)}</div>}
+            {/* <div dangerouslySetInnerHTML={{__html: `<p>Hello World, How your wife and childs?</p><p><img src="http://localhost:4000/images/post/16122022-225857_404_13pro_max_8.jpg" alt="" width="308" height="395"></p>
+<h1>This is first blog</h1>`}}></div> */}
         </div>
-
-    );
+     );
 };
 
 export default PostNews;
