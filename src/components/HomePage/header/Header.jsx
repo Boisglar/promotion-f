@@ -31,7 +31,7 @@ export default function Header() {
           <ul className={styles.list}>
               <li><NavLink className={styles.li} to={'/about'}>О НАС</NavLink></li>
               <li><NavLink className={styles.li} to={'/'}>ТУРНИРЫ</NavLink></li>
-              <li><NavLink className={styles.li}>БОЙЦЫ</NavLink></li>
+              <li><NavLink className={styles.li} to={'/fighters'}>БОЙЦЫ</NavLink></li>
               <li><NavLink className={styles.li} to={'/news'}>НОВОСТИ</NavLink></li>
               <li><NavLink className={styles.li} to={'/shop'}>МАГАЗИН</NavLink></li>  
           </ul>

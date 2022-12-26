@@ -1,5 +1,4 @@
 .newsPages {
-    background-color: rgb(0, 0, 0);
     color: white;
     box-sizing: border-box;
 }
@@ -20,15 +19,15 @@
    
 }
 .filterNews{
-    background-color: rgb(47, 47, 47);
+    background-color: rgb(62, 62, 62);
     padding: 10px 5px;
     display: flex;
     margin-bottom: 15px;
 }
 
 .alink{
+    color: white;
     text-decoration: none;
-    background-color: rgb(47, 47, 47);
     margin-right: 15px;
 }
 
@@ -38,9 +37,10 @@
 .cardNews{
     margin: 10px;
     max-width: 200px;
+    max-height: 200px;
     font-size: 11px;
     cursor: pointer;
-    border: 3px solid #000000; 
+    border: 3px solid transparent; 
 }
 .outputNews{
     display: flex;

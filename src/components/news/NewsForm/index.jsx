@@ -30,9 +30,11 @@ const NewsForm = () => {
   const handleDescription = (e) => setDescription(e.target.value);
 
   const saveForm = () => {
-    console.log(photo);
     dispatch(addNews({photo, title, description}));
-
+    alert("Новость добавлена!")
+    setPhoto("")
+    setTitle("")
+    setDescription("")
   };
 
   return (

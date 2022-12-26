@@ -10,7 +10,9 @@ function NewsFull() {
 
   const [commentText, setCommentText] = useState('')
 
-  const news = useSelector((state) => state.news.news).find((item) => item._id === id);
+  const news = useSelector((state) => state.news.news).find(
+    (item) => item._id === id
+  );
   const comments = useSelector((state) => state.comments.comments)?.filter((item) => item.newsId === id);
 
   const dispatch = useDispatch();

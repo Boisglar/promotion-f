@@ -1,5 +1,5 @@
 .newsFull{
-background-color: black;
+background-color: transparent;
 color: white;
 max-width: 900px;
 margin: auto;
@@ -29,7 +29,7 @@ margin: auto;
     padding: 20px;
     min-height: 10px;
     margin-bottom: 20px;
-    background-color: black;
+    background-color: transparent;
 }
 .button{
     color: white;
@@ -38,7 +38,7 @@ margin: auto;
     border: 1px solid red;
     border-radius: 5px;
     cursor: pointer;
-    background-color: black;
+    background-color: transparent;
 }
 .button:hover {
     color: rgb(152, 150, 150);

@@ -3,6 +3,7 @@
  import axios from 'axios';
  import LoadedImages from './LoadedImages';
  import styles from './LoadedImages.module.css'
+import NewsForm from './NewsForm';
 
  const PostNews = () => {
      const [img, setImg] = useState([])
@@ -34,31 +35,34 @@
    }
 
     return (
-        <div className={styles.editor}>
-            <Editor
-                onInit={(evt, editor) => editorRef.current = editor}
-                init={{
-                    selector: 'textarea',
-                    plugins: ['image', 'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
-                        'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-                        'insertdatetime', 'media', 'table', 'help', 'wordcount'],
-                    toolbar: ['undo redo | blocks | ' +
-                        'bold italic backcolor | alignleft aligncenter ' +
-                        'alignright alignjustify | bullist numlist outdent indent | ' +
-                        'removeformat | image'],
-                    image_list: [
-                        { title: 'My image 1', value: 'https://www.example.com/my1.gif' },
-                        { title: 'My image 2', value: 'http://www.moxiecode.com/my2.gif' }
-                    ]
-                }}
-            />
-            <input className={styles.inp} type="file" name='post' multiple='multiple' onChange={(e) => setImg((x) => e.target.files)} />
-            <button className={styles.btn} onClick={handleImg}>Загрузить и получить ссылку</button>
-            <button className={styles.btn} type='button' onClick={handlePost}>Сохранить</button>
-            {load && <div className={styles.main}>{images.data.map((item) => <LoadedImages path={item.path}/>)}</div>}
-            {/* <div dangerouslySetInnerHTML={{__html: `<p>Hello World, How your wife and childs?</p><p><img src="http://localhost:4000/images/post/16122022-225857_404_13pro_max_8.jpg" alt="" width="308" height="395"></p>
-<h1>This is first blog</h1>`}}></div> */}
-        </div>
+        <>
+            <NewsForm/>
+            <div className={styles.editor}>
+                <Editor
+                    onInit={(evt, editor) => editorRef.current = editor}
+                    init={{
+                        selector: 'textarea',
+                        plugins: ['image', 'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+                            'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+                            'insertdatetime', 'media', 'table', 'help', 'wordcount'],
+                        toolbar: ['undo redo | blocks | ' +
+                            'bold italic backcolor | alignleft aligncenter ' +
+                            'alignright alignjustify | bullist numlist outdent indent | ' +
+                            'removeformat | image'],
+                        image_list: [
+                            { title: 'My image 1', value: 'https://www.example.com/my1.gif' },
+                            { title: 'My image 2', value: 'http://www.moxiecode.com/my2.gif' }
+                        ]
+                    }}
+                />
+                <input className={styles.inp} type="file" name='post' multiple='multiple' onChange={(e) => setImg((x) => e.target.files)} />
+                <button className={styles.btn} onClick={handleImg}>Загрузить и получить ссылку</button>
+                <button className={styles.btn} type='button' onClick={handlePost}>Сохранить</button>
+                {load && <div className={styles.main}>{images.data.map((item) => <LoadedImages path={item.path}/>)}</div>}
+                {/* <div dangerouslySetInnerHTML={{__html: `<p>Hello World, How your wife and childs?</p><p><img src="http://localhost:4000/images/post/16122022-225857_404_13pro_max_8.jpg" alt="" width="308" height="395"></p>
+    <h1>This is first blog</h1>`}}></div> */}
+            </div>
+        </>
      );
 };
 
