@@ -8,11 +8,13 @@ import Admin from './components/Admin';
 import NewsGet from './components/News/AllNews/NewsGet';
 import NewsFull from './components/News/FullNews';
 import NewsForm from './components/News/NewsForm';
+import Carousel from "./components/Carousel/Carousel"
+
 
 function App() {
   return (
     <div className="App">
-      <Routes>
+       <Routes>
         <Route path='/' element={<Layot/>}>
           <Route index element={<HomePage/>}/>
           <Route path='/about' element={<AboutUs/>}/>
@@ -22,7 +24,8 @@ function App() {
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/admin' element={<Admin/>}/>
         </Route>
-      </Routes>
+      </Routes> 
+        
     </div>
   );
 }
