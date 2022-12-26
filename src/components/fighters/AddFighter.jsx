@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { postFighter } from '../../Features/fighters.slice';
 import { getWeightCategories } from '../../Features/weightCategories.slice';
 import styles from './AddFighter.module.css'

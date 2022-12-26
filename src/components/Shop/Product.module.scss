@@ -1,3 +1,7 @@
+.main_page {
+    background-color: #fff;
+}
+
 .item_header {
     display: flex;
     justify-content: space-between;
@@ -20,10 +24,17 @@
     height: 450px;
 }
 
+.product_info {
+    text-align: left;
+    // padding-left: 15px;
+}
+
 .descript_item {
     width: 300px;
     margin-top: 200px;
 }
+
+
 
 .cart_item {
     width: 400px;

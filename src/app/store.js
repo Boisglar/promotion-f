@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import users from "../features/newsSlice";
 import authSlice from "../Features/auth.slice";
 import fightersSlice from "../Features/fighters.slice";
 import newsSlice from "../Features/newsSlice"
