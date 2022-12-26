@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeCart, deleteFromCart } from "../../../features/cart.slice";
+import { NavLink } from "react-router-dom";
 
 import styles from "./Cart.module.scss";
 
@@ -29,13 +30,15 @@ const CartItem = ({ product }) => {
 
   return (
     <div className={styles.cart_item}>
+      <NavLink to={`/product/${product._id}`}>
       <div className={styles.product_img}>
         <img
-          className={styles.image}
+          className={styles.cart_image}
           src={`http://localhost:4000/${product.image}`}
           alt={product.name}
         />
       </div>
+      </NavLink>
       <div className={styles.price_name}>
         <div className={styles.product_name}>{product.name}</div>
         

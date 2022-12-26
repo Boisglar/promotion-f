@@ -11,14 +11,15 @@
 // работа с корзиной изнутри
 
 .cart_item {
-  width: 60%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.product_img {
-  width: 200px;
-  height: 150px;
+.cart_image {
+  width: 150px;
+  height: 130px;
 }
 
 .price_name {

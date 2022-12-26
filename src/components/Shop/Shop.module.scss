@@ -49,7 +49,6 @@
 /* card */
 
 .img_div {
-  background-color: rgb(203, 49, 49);
   border-radius: 10px;
 }
 
@@ -70,10 +69,10 @@
   position: absolute; /* Абсолютное позиционирование */
   left: 25%;
   top: 50%; /* Положение подсказки */
-  z-index: 1; /* Отображаем подсказку поверх других элементов */
+  z-index: 10; /* Отображаем подсказку поверх других элементов */
   background: rgba(243, 243, 180, 0.9); /* Полупрозрачный цвет фона */
   font-size: 20px;
-  color: #000;
+  color: rgb(223, 97, 97);
 }
 
 .product {
@@ -119,10 +118,10 @@ font-size: 20px;
   left: 5px;
   border-radius: 5px;
   font-size: 20px;
-  background-color: rgb(64, 119, 230);
+  background-color: transparent;
 }
 
 .item_btn:hover {
-  background-color: rgb(0, 231, 42);
+  background-color: red;
   transition: 0.4s;
 }

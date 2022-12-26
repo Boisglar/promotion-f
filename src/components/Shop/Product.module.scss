@@ -20,13 +20,20 @@
 }
 
 .img {
+    border-radius: 15px;
     width: 400px;
     height: 450px;
+    margin-bottom: 30px;
+}
+
+
+.product_main {
+    align-items: left;
 }
 
 .product_info {
     text-align: left;
-    // padding-left: 15px;
+    margin-right: 90px;
 }
 
 .descript_item {
@@ -45,21 +52,22 @@
 }
 
 .price_item {
-    padding: 10px;
+    padding: 20px;
     font-size: 25px;
+    color: #000;
+    text-align: left;
 }
 
 .cart_btn {
     width: 300px;
     font-size: 30px;
     border-radius: 10px;
-    background-color: rgb(38, 84, 235);
-    margin-top: 30px;
-    margin-left: 50px;
+    background-color: transparent;
+    margin-top: 60px;
 }
 
 .cart_btn:hover {
-    background-color: rgb(51, 124, 234);
+    background-color: red;
     transition: .4s;
 }
 

@@ -10,12 +10,9 @@ import { NavLink } from "react-router-dom";
 import styles from "./Shop.module.scss";
 import { cartState } from "../../features/cart.slice";
 import { addToCart } from "../../features/cart.slice";
-// import Cart from "./Cart/Cart";
 
 const Shop = (product) => {
   const active = useSelector((state) => state.cart.active);
-  // const products = useSelector((state) => state.cart.productId);
-  // const valid = products.filter((element) => element.productId === product._id);
   const dispatch = useDispatch();
   const goods = useSelector((state) => state.products.products);
   const [search, setSearch] = useState("");
@@ -82,12 +79,12 @@ const Shop = (product) => {
           return (
             <React.Fragment key={product._id}>
               <div className={styles.main_card}>
-                <NavLink to="/product">
+                <NavLink to={`/product/${product._id}`}>
                   <img
                     className={styles.img}
                     data-title="Перейти к товару"
-                    src={`https://upload.wikimedia.org/wikipedia/commons/8/80/140-P1020281_-_Flickr_-_Laurie_Nature_Bee.jpg`}
-                    alt="nionw"
+                    src={`http://localhost:4000/${product.image}`}
+                    alt=""
                   />
                   </NavLink>
                 <div className={styles.product_item}>{product.price}</div>

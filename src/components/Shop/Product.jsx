@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useParams } from "react-router-dom";
 import { getProduct } from "../../features/product.slice";
+import { addToCart } from "../../features/cart.slice";
 import styles from "./Product.module.scss";
 import img2 from "./photo/basket.png";
 const Product = () => {
   const dispatch = useDispatch();
-  // const active = useSelector((state) => state.cart.active);
   const product = useSelector((state) => state.products.product);
   const { id } = useParams();
   useEffect(() => {
@@ -17,6 +17,10 @@ const Product = () => {
     return <div>loading</div>;
   }
 
+  const handleAddCart = (id) => {
+    dispatch(addToCart(id));
+};
+
   return (
     <div className={styles.main_page}>
       <div className={styles.item_header}>
@@ -24,13 +28,9 @@ const Product = () => {
           <div>{product.name}</div>
         </div>
         <div className={styles.basket_cart}>
-        <NavLink to="/cart">
+          <NavLink to="/cart">
             <div className={styles.basket_div}>
-              <img
-                className={styles.basket}
-                src={img2}
-                alt=""
-              />
+              <img className={styles.basket} onClick={() => handleAddCart(product._id)} src={img2} alt="" />
             </div>
           </NavLink>
         </div>
@@ -45,7 +45,7 @@ const Product = () => {
             alt=""
           />
         </div>
-        <div>
+        <div className={styles.product_main}>
           <div className={styles.product_info}>
             <h3>Модель</h3>
             <div>{product.model}</div>
