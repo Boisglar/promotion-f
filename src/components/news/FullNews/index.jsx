@@ -25,8 +25,7 @@ function NewsFull() {
 
   const handleAddComment = () => {
     if(commentText !== "") {
-      return dispatch(addComments({commentText, id, author: '63a2cfa6875fe9d82d3af070'})),
-      setCommentText("")
+      return dispatch(addComments({commentText, id, author: '63a2cfa6875fe9d82d3af070'})), setCommentText("")
     }
     return false
   }
