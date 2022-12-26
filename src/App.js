@@ -6,9 +6,9 @@ import AboutUs from './components/HomePage/About/AboutUs';
 
 import Shop from './components/Shop/Shop';
 import Admin from './components/Admin';
-import NewsGet from './components/News/AllNews/NewsGet';
-import NewsFull from './components/News/FullNews';
-import NewsForm from './components/News/NewsForm';
+import NewsGet from './components/news/AllNews/NewsGet';
+import NewsFull from './components/news/FullNews';
+import NewsForm from './components/news/NewsForm';
 import Cart from './components/Shop/Cart/Cart';
 import Product from './components/Shop/Product';
 
@@ -25,7 +25,7 @@ function App() {
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/admin' element={<Admin/>}/>
           <Route path="/cart" element = {<Cart/>} />
-          <Route path="/product" element = {<Product/>} />
+          <Route path="/product/:id" element = {<Product/>} />
         </Route>
       </Routes>
     </div>

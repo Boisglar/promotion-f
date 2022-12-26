@@ -43,6 +43,13 @@ const AddProduct = () => {
 
   const handleAdd = (e) => {
     e.preventDefault();
+    setImage("")
+    setName("")
+    setModel("")
+    setPrice(0)
+    setSize("")
+    setColor("")
+    setComposition("")
     dispatch(
       createProduct({
         image,
@@ -59,7 +66,7 @@ const AddProduct = () => {
     <>
       <div className={styles.main}>
         <h1 className={styles.form_text}>Добавление нового товара</h1>
-        <form className={styles.form}>
+        <form onSubmit={handleAdd} className={styles.form}>
           <div className={styles.form_group}>
             <label>Наименование</label>
             <input
