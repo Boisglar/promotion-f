@@ -2,17 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./NewsFull.css";
 import { useParams } from "react-router-dom";
-import { getNews } from "../../../Features/newsSlice";
-import { addComments, getComments } from "../../../Features/comment.slice";
+import { getNews } from "../../../features/newsSlice";
+import { addComments, getComments } from "../../../features/comment.slice";
 
 function NewsFull() {
   const { id } = useParams();
 
   const [commentText, setCommentText] = useState('')
 
-  const news = useSelector((state) => state.news.news).find(
-    (item) => item._id === id
-  );
+  const news = useSelector((state) => state.news.news).find((item) => item._id === id);
   const comments = useSelector((state) => state.comments.comments)?.filter((item) => item.newsId === id);
 
   const dispatch = useDispatch();
@@ -25,7 +23,7 @@ function NewsFull() {
 
   const handleAddComment = () => {
     if(commentText !== "") {
-      return dispatch(addComments({commentText, id, author: '63a2cfa6875fe9d82d3af070'})),
+      dispatch(addComments({commentText, id, author: '63a2cfa6875fe9d82d3af070'}))
       setCommentText("")
     }
     return false

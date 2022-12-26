@@ -6,16 +6,16 @@ import {
   setSearchText,
   searching,
 } from "../../features/product.slice";
-import { Route, Routes, Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Shop.module.scss";
 import { cartState } from "../../features/cart.slice";
 import { addToCart } from "../../features/cart.slice";
-import Cart from "./Cart/Cart";
+// import Cart from "./Cart/Cart";
 
 const Shop = (product) => {
   const active = useSelector((state) => state.cart.active);
-  const products = useSelector((state) => state.cart.productId);
-  const valid = products.filter((element) => element.productId === product._id);
+  // const products = useSelector((state) => state.cart.productId);
+  // const valid = products.filter((element) => element.productId === product._id);
   const dispatch = useDispatch();
   const goods = useSelector((state) => state.products.products);
   const [search, setSearch] = useState("");

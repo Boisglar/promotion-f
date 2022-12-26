@@ -6,7 +6,7 @@ import styles from "./Product.module.scss";
 import img2 from "./photo/basket.png";
 const Product = () => {
   const dispatch = useDispatch();
-  const active = useSelector((state) => state.cart.active);
+  // const active = useSelector((state) => state.cart.active);
   const product = useSelector((state) => state.products.product);
   const { id } = useParams();
   useEffect(() => {

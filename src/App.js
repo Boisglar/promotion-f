@@ -9,6 +9,8 @@ import Admin from './components/Admin';
 import NewsGet from './components/News/AllNews/NewsGet';
 import NewsFull from './components/News/FullNews';
 import NewsForm from './components/News/NewsForm';
+import Cart from './components/Shop/Cart/Cart';
+import Product from './components/Shop/Product';
 
 function App() {
   return (

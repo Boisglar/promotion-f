@@ -5,7 +5,7 @@ import image from "../header/LOGO.png"
 import login from './login.png'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { modalState } from '../../../Features/auth.slice'
+import { modalState } from '../../../features/auth.slice'
 import Authorization from '../../Auth/Authorization'
 
 export default function Header() {
