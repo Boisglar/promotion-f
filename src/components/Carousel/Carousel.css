@@ -1,0 +1,22 @@
+.slide-item{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slide img{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.slick-arrow slick-next{
+color: black;
+}
+.slick-arrow slick-prev{
+    color: black;
+}
+.slick-prev:before, .slick-next:before {
+color: rgb(214, 0, 0);
+}
+.slick-dots li button:before{
+    color: red;
+}

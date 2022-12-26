@@ -1,0 +1,138 @@
+
+*{
+  box-sizing: border-box;
+}
+.createSheltersMainBox {
+    width: 100%;
+    font-family: cursive;
+    background-color: #323333;
+    margin: auto;
+  }
+  .createSheltersPosition {
+    margin: auto;
+    padding: 85px;
+    width: 90%;
+    display: flex;
+  }
+  
+  .createSheltersFlex {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    margin: 0;
+  }
+  
+  .createSheltersFileUpload {
+    height: 80%;
+    width: 60%;
+    display: flex;
+    background-color: rgb(101, 100, 100);
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    border: 1px solid rgb(199, 199, 199);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .createSheltersImage {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .createSheltersImage label {
+    width: 100%;
+    height: 100%;
+    color: black;
+  }
+  .createSheltersImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .createSheltersImage .imageIcon {
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+  .createSheltersDetails {
+    width: 100%;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 7px;
+    padding: 10px 0;
+    background-color: rgb(43, 42, 42);
+  }
+  
+  .createSheltersTitle {
+
+    border-bottom: 1px solid rgb(237, 0, 0);
+    padding: 10px 20px;
+  }
+  
+  .createSheltersTitle span {
+
+    border-bottom: 5px solid red;
+    font-weight: 600;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+  }
+  
+  .createSheltersFuncional {
+    width: 100%;
+    padding: 20px 40px;
+  }
+  
+  .createSheltersFuncionalInfo {
+    font-size: 21px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  
+  .createSheltersFuncionalInfo input {
+    width: 100%;
+    line-height: inherit;
+    padding: 6px 9px;
+    border: 1px solid #eee;
+    color: #fffdfd;
+    font-size: 15px;
+    background-color: #6f6f6f;
+  }
+  
+  .createSheltersFuncionalInfo textarea {
+    width: 100%;
+    line-height: inherit;
+    padding: 10px;
+    border: 1px solid #eee;
+    color: #ffffff;
+    font-size: 15px;
+    background-color: #6f6f6f;
+
+  }
+  
+  .buttonPositionCreateShelters {
+    width: 87%;
+    margin: auto;
+  }
+  
+  .buttonPositionCreateShelters .buttonForm {
+    border: none;
+    border-radius: 8px;
+    background-color: #3f3f40;
+    color: white;
+    padding: 7px 10px;
+    float: right;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border: 1px solid transparent
+
+  }
+  .buttonPositionCreateShelters .buttonForm:hover {
+    border: 1px solid red
+  }

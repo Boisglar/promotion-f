@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 import styles from './Header.module.scss'
 import image from "../header/LOGO.png"
 import login from './login.png'
-import Authorization from '../../Auth/Authorization'
 import { useDispatch, useSelector } from 'react-redux'
 import { modalState } from '../../../Features/auth.slice'
+import Authorization from '../../Auth/Authorization'
 export default function Header() {
   const dispatch = useDispatch()
   const isAuth = useSelector((state) => state.users.isAuth)

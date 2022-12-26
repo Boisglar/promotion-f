@@ -59,8 +59,7 @@
             {/* <div dangerouslySetInnerHTML={{__html: `<p>Hello World, How your wife and childs?</p><p><img src="http://localhost:4000/images/post/16122022-225857_404_13pro_max_8.jpg" alt="" width="308" height="395"></p>
 <h1>This is first blog</h1>`}}></div> */}
         </div>
-
-    );
+     );
 };
 
 export default PostNews;
